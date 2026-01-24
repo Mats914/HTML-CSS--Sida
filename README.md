@@ -1,26 +1,26 @@
-# HTML-CSS--Sida
+# HTML-CSS--Page
 
-Detta projekt är en enkel statisk webbplats byggd med **HTML och CSS**.  
-Syftet med projektet är att träna grundläggande webbutveckling, strukturering av sidor samt enkel design.
+This project is a simple static website built with **HTML and CSS**.
+The purpose of the project is to practice basic web development, page structuring, and simple design.
 
-## 📁 Projektstruktur
+## 📁 Project Structure
 
-- `index.html` – Startsida
-- `style.css` – Huvudstil för startsidan
-- `Meny.html` – Meny-sida
-- `Meny.css` – Stilar för meny-sidan
-- `OmOss.html` – Om oss-sida
-- `OmOss.css` – Stilar för Om oss-sidan
-- `img/` – Bilder som används i projektet
-- `README.md` – Projektbeskrivning
+- `index.html` – Home page
+- `style.css` – Main style for the home page
+- `Menu.html` – Menu page
+- `Menu.css` – Styles for the menu page
+- `OmOss.html` – About us page
+- `OmOss.css` – Styles for the About us page
+- `img/` – Images used in the project
+- `README.md` – Project description
 
-## 🛠️ Tekniker
+## 🛠️ Technologies
 
 - HTML5
 - CSS3
 
-## 🚀 Hur man kör projektet
+## 🚀 How to run the project
 
-1. Klona eller ladda ner repositoryt:
-   ```bash
-   git clone https://github.com/Mats914/HTML-CSS--Sida.git
+1. Clone or download the repository:
+```bash
+git clone https://github.com/Mats914/HTML-CSS--Page.git
