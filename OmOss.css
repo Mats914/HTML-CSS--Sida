@@ -16,6 +16,7 @@
   --color-text-muted: #5a5042;
   --color-nav: #1a1510;
   --shadow-soft: 0 4px 20px rgba(92, 46, 10, 0.08);
+  --shadow-card: 0 8px 32px rgba(92, 46, 10, 0.12);
   --radius: 12px;
   --radius-sm: 8px;
 }
@@ -94,20 +95,211 @@ header h1 {
   color: var(--color-nav);
 }
 
+/* Hero-sektion */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 3rem;
+  background: var(--color-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-text {
+  padding: 2rem 2.5rem;
+}
+
+.hero-text h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  color: var(--color-primary-dark);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.hero-lead {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+/* Sektioner */
+.section {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  color: var(--color-primary-dark);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-accent);
+  display: block;
+}
+
+/* Vår historia */
+.section-story {
+  background: var(--color-card);
+  padding: 2rem 2.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+.section-story .section-title {
+  display: block;
+  text-align: center;
+}
+
+.story-content {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.story-content p {
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.story-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Kort-grid */
+.section-cards .section-title {
+  display: block;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--color-card);
+  padding: 1.75rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid rgba(196, 163, 90, 0.2);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.card h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.35rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* Galleri */
+.section-gallery {
+  margin-bottom: 3rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.gallery-item {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  aspect-ratio: 4/3;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Kontakt-box */
 .content-box {
-  padding: 28px;
+  padding: 2rem 2.5rem;
   background: var(--color-card);
   box-shadow: var(--shadow-soft);
   border-radius: var(--radius);
   margin-bottom: 28px;
 }
 
-.content-box p {
-  color: var(--color-text-muted);
-  max-width: 720px;
-  margin: 0 auto;
+.section-contact .section-title {
+  display: block;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
+.contact-info {
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-info p {
+  color: var(--color-text-muted);
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+}
+
+.contact-info a {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.contact-info a:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+/* Footer */
 footer {
   color: #e8e4dc;
   text-align: center;
@@ -120,6 +312,35 @@ footer {
 footer h4 {
   font-weight: 500;
   font-size: 1rem;
+}
+
+/* Responsiv */
+@media (max-width: 980px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image {
+    min-height: 220px;
+  }
+
+  .hero-text {
+    padding: 1.5rem 2rem;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-item:last-child {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 768px) {
@@ -137,13 +358,27 @@ footer h4 {
     align-items: center;
   }
 
+  .section-story,
   .content-box {
-    padding: 20px;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item:last-child {
+    grid-column: 1;
+    max-width: 100%;
   }
 }
 
-@media (max-width: 980px) {
-  .content-box {
-    padding: 20px;
+@media (max-width: 480px) {
+  .hero-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    padding: 1.25rem;
   }
 }
