@@ -12,7 +12,17 @@ The purpose of the project is to practice basic web development, page structurin
 - `OmOss.html` – About us page
 - `OmOss.css` – Styles for the About us page
 - `img/` – Images used in the project
+- `Images/` – Additional project images
 - `README.md` – Project description
+
+## 📷 Images
+
+Project images from the `Images/` folder:
+
+![1 (1)](Images/1%20(1).png)
+![1 (2)](Images/1%20(2).png)
+![1 (3)](Images/1%20(3).png)
+![1 (4)](Images/1%20(4).png)
 
 ## 🛠️ Technologies
 
